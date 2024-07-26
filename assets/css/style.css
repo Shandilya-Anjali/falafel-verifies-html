@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+
   /* coomon css*/
   *,
   ::before,
   ::after {
     @apply box-border;
   }
+
   * {
     outline: none;
     box-shadow: none;
   }
+
   body {
     @apply p-0 m-0 font-jost text-16 overflow-x-hidden text-Black-200;
   }
@@ -24,9 +27,11 @@
   p {
     @apply m-0 text-15 lgscreen:text-14 leading-[25px] font-400;
   }
+
   a {
     @apply no-underline;
   }
+
   a,
   button,
   input,
@@ -35,18 +40,23 @@
     @apply no-underline outline-0;
     box-shadow: none;
   }
+
   a:hover {
     @apply transition-all duration-300 ease-linear delay-150;
   }
+
   ul {
     @apply p-0 m-0;
   }
+
   ul li {
     @apply list-none;
   }
+
   img {
     @apply block;
   }
+
   h1,
   h2,
   h3,
@@ -55,6 +65,7 @@
   h6 {
     @apply m-0 font-500;
   }
+
   h1,
   .h1 {
     @apply lgscreen:text-[35px] text-[52px] font-jost leading-66 font-700 xsscreen2:text-24;
@@ -64,31 +75,37 @@
   .h2 {
     @apply text-18 lg:text-22 leading-[28px] font-400;
   }
+
   h3,
   .h3 {
     @apply text-14 lg:text-18 leading-[26px] capitalize;
   }
+
   h4,
   .h4 {
     @apply text-20 xl2:text-24 leading-[125%];
   }
+
   h4.sub {
     @apply text-20 leading-[125%];
   }
+
   h5,
   .h5 {
     @apply text-15 leading-[140%];
   }
+
   h6,
   .h6 {
     @apply text-12 leading-22;
   }
+
   .content {
     @apply relative block w-full;
   }
 
   .content p a {
-    @apply underline underline-offset-1  duration-300 ease-in delay-150 text-Black-100 font-jost  font-400;
+    @apply underline underline-offset-1 duration-300 ease-in delay-150 text-Black-100 font-jost font-400;
   }
 
   .content p {
@@ -98,6 +115,7 @@
   .content p a {
     @apply hover:underline;
   }
+
   .content p span {
     @apply font-700;
   }
@@ -110,6 +128,7 @@
   .title h6 a {
     @apply underline text-Black-200;
   }
+
   .title-black h1,
   .title-black h2,
   .title-black h3,
@@ -123,72 +142,92 @@
     @apply text-15 leading-26 font-400 text-Black-300;
   }
 }
+
 @layer components {
   .btn {
-    @apply inline-block text-center  font-jost  capitalize leading-20;
+    @apply inline-block text-center font-jost capitalize leading-20;
   }
+
   .btn-black {
-    @apply text-16 rounded-[40px] border-Black-200 bg-Black-100 border-1 px-[42px] py-5 border-solid text-White  leading-24 capitalize transition-all duration-300 delay-150;
+    @apply text-16 rounded-[40px] border-Black-200 bg-Black-100 border-1 px-[42px] py-5 border-solid text-White leading-24 capitalize transition-all duration-300 delay-150;
   }
+
   .btn-black:hover {
     @apply bg-White text-Black-100;
   }
+
   .btn-b-big {
-    @apply text-18 rounded-[40px] border-Black-200 bg-Black-100 border-1 px-[68px] py-5 border-solid text-White  leading-24 capitalize;
+    @apply text-18 rounded-[40px] border-Black-200 bg-Black-100 border-1 px-[68px] py-5 border-solid text-White leading-24 capitalize;
   }
+
   .btn-b-sm {
-    @apply uppercase text-[10px] leading-15 tracking-[0.53px] px-[17px] py-14 transition-all duration-300 delay-150  rounded-[40px] border-Black-200 bg-Black-100 border-1 border-solid text-White;
+    @apply uppercase text-[10px] leading-[13px] tracking-[0.53px] px-[17px] py-14 transition-all duration-300 delay-150 rounded-[40px] border-Black-200 bg-Black-100 border-1 border-solid text-White;
   }
+
   .btn-b-sm:hover {
     @apply bg-White text-Black-100;
   }
+
   .btn-transperent {
-    @apply text-16 rounded-[40px] border-Black-200 bg-transparent transition-all duration-300 delay-150 border-1 px-[42px] py-5 border-solid text-Black-100  leading-24 capitalize;
+    @apply text-16 rounded-[40px] border-Black-200 bg-transparent transition-all duration-300 delay-150 border-1 px-[48px] py-5 border-solid text-Black-100 leading-24 capitalize;
   }
+
   .btn-transperent:hover {
     @apply bg-Black-100 text-White;
   }
+
   .container-fluid-big {
     @apply px-[135px] lgscreen:px-[70px] mdscreen:px-50 xsscreen2:px-30 w-full;
   }
+
   .container-fluid-sm {
     @apply px-30 mdscreen:px-20 w-full;
   }
 }
+
 @layer utilities {
+
   /* Header Start */
   @keyframes smoothScroll {
     0% {
       transform: translateY(-100px);
     }
+
     100% {
       transform: translateY(0px);
     }
   }
+
   @keyframes smoothup {
     100% {
       display: none;
     }
   }
+
   @keyframes smoothdown {
     0% {
       display: block;
     }
   }
+
   .announcement.up {
     animation: smoothup -0.1s;
   }
+
   .announcement.down {
     animation: smoothdown 0s forwards;
   }
-  .announcement.up > .container-fluid {
+
+  .announcement.up>.container-fluid {
     @apply hidden;
   }
+
   .announcement-bar .swiper-wrapper {
     @apply items-center;
   }
+
   .announcement-bar p {
-    @apply text-White font-300 font-jost;
+    @apply text-White leading-24 tracking-[0.8px] font-700 font-jost;
   }
 
   header.header {
@@ -210,7 +249,7 @@
     @apply fixed top-0;
   }
 
-  .header .mobile-menu-main ul{
+  .header .mobile-menu-main ul {
     @apply flex lg:flex-wrap lg:items-center my-0 lg:justify-between lg:gap-[52px] xl:h-full;
   }
 
@@ -219,11 +258,11 @@
   }
 
   .header .header-bottom .mobile-menu-main ul li a {
-    @apply text-Black-100 text-15 font-jost uppercase relative;
+    @apply text-Black-100 text-16 font-jost font-400 leading-26 uppercase tracking-[0.8px] relative;
   }
 
   .header .header-bottom .mobile-menu-main ul li a::after {
-    @apply content-[''] absolute  bottom-[-5px] bg-Black-100 w-0 h-[1px] ease-linear left-0 transition-all duration-300 delay-75 opacity-100;
+    @apply content-[''] absolute bottom-[-5px] bg-Black-100 w-0 h-[1px] ease-linear left-0 transition-all duration-300 delay-75 opacity-100;
   }
 
   .header.is-sticky .header-bottom .mobile-menu-main ul li a::after {
@@ -246,32 +285,37 @@
 
   header.is-sticky .header-bottom .cat-btn a:hover,
   header.is-sticky .announcement .close-icon a:hover {
-    filter: invert(43%) sepia(81%) saturate(402%) hue-rotate(320deg)
-      brightness(88%) contrast(97%);
+    filter: invert(43%) sepia(81%) saturate(402%) hue-rotate(320deg) brightness(88%) contrast(97%);
   }
 
   .navbar-toggler {
     @apply cursor-pointer gap-[2px];
   }
+
   .header-bottom .navbar-toggler span {
-    @apply bg-Black-100 h-[2.5px] w-[15px] rounded-[50px];
+    @apply bg-Black-100 h-[2px] w-[15px] rounded-[50px];
   }
+
   .header .navbar {
     @apply lgscreen:absolute lgscreen:top-[78px] lgscreen:left-0 lgscreen:w-full lgscreen:bg-White lgscreen:p-30;
   }
+
   .navbar .mobile-menu-main ul {
     @apply lgscreen:flex-col lgscreen:gap-[30px] lgscreen:items-start;
   }
+
   .header .btn-link-ico img {
     @apply lgscreen:max-w-[15px] xsscreen2:max-w-[12px] transition-all duration-300 delay-150;
   }
+
   .header .btn-link-ico:hover img {
-    filter: invert(50%) sepia(100%) saturate(0%) hue-rotate(276deg)
-      brightness(120%) contrast(103%);
+    filter: invert(50%) sepia(100%) saturate(0%) hue-rotate(276deg) brightness(120%) contrast(103%);
   }
+
   .search-bar {
     @apply hidden bg-opacity-90 bg-Black-200 w-full absolute top-[80px] left-0;
   }
+
   .search-bar.active {
     @apply block;
   }
@@ -280,90 +324,133 @@
   .banner-wrapper .banner-img {
     @apply absolute top-0 left-0 h-full w-full;
   }
-  
+
   .banner-wrapper .banner-img::after {
     @apply content-[''] absolute top-0 left-0 w-full h-full mdscreen:bg-banner_gradient;
   }
 
   /* filter-wrapper-start */
   .filter-wrapper .title h3 {
-    @apply text-Black-300;
+    @apply text-Black-300 font-400 leading-24;
   }
+
   .filter-wrapper .filter-content {
     @apply relative cursor-pointer py-8;
-  }
-  .filter-wrapper .filter-content::after {
-    @apply content-[''] absolute bottom-0 left-0 h-0 w-full transition-all duration-500  z-1_minus;
-  }
-  .filter-wrapper .filter-content:hover .title h3 {
-    @apply text-White transition-all duration-300;
-  }
-  .filter-wrapper .filter-content:hover img {
-    @apply transition-all duration-300;
-    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(123deg)
-      brightness(125%) contrast(96%);
-    z-index: 2;
   }
 
   .filter-wrapper .filter-content::after:hover {
     @apply h-full bg-Black-200;
   }
+
   /* filter-wrapper-end*/
 
   /* img-grid-start */
+
   .img-grid-wrapper .landscape {
     @apply pt-[65.09%] h-full w-full relative overflow-hidden block bg-Black-300/30;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
+
   .img-grid-wrapper .landscape img {
     @apply absolute top-0 left-0 object-cover h-full w-full transition-all duration-500 ease-linear delay-150 scale-100 mix-blend-normal;
   }
+
   .img-grid-wrapper .card:hover .landscape img {
     @apply transition-all duration-500 ease-linear delay-150 scale-125 grayscale mix-blend-color;
   }
+
   .img-grid-wrapper .portrait {
     @apply relative lg:pt-[100%] pt-[65.09%] h-full w-full overflow-hidden block bg-Black-300/30;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
+
   .img-grid-wrapper .portrait img {
     @apply absolute top-0 left-0 transition-all duration-500 ease-linear delay-150 scale-100 mix-blend-normal object-cover h-full w-full;
   }
+
   .img-grid-wrapper .card .overlay {
     @apply absolute top-[50%] left-[50%] translate-x-minus_50 translate-y-minus_50 bg-Black-100 px-[10px] py-[2px];
   }
+
   .img-grid-wrapper .card .title h3 {
-    @apply text-White xl:text-20 text-15 mdscreen:text-15 font-700 uppercase tracking-05em;
+    @apply text-White xl:text-20 text-15 lgscreen:text-14 font-700 uppercase tracking-05em;
   }
+
   .img-grid-wrapper .card:hover .portrait img {
     @apply transition-all duration-500 ease-linear delay-150 scale-125 grayscale mix-blend-color;
   }
+
   /* img-grid-end */
 
   /* product-start */
-  .product-wrapper .product-category span {
-    @apply text-16 leading-24 uppercase font-400 text-gray-200;
+  .product-wrapper .product-category a {
+    @apply text-16 xsscreen2:text-14 leading-24 uppercase font-400 text-gray-200;
   }
+
+  .product-wrapper .product-category a:hover {
+    @apply text-red-500;
+  }
+
   .product-wrapper .product-img {
     @apply pt-[100%] h-full w-full relative;
   }
+
   .product-wrapper .product-img img {
-    @apply absolute top-0 left-0 object-cover h-full w-full;
+    @apply absolute top-0 left-0 object-cover h-full w-full transition-all duration-300 delay-150;
   }
+
   .product-wrapper .product-description {
-    @apply max-w-[262px] ml-[20px] mt-[15px];
+    @apply max-w-[250px] ml-[20px] mt-[15px];
+  }
+
+  .product-wrapper .product-title h4 {
+    @apply text-22 leading-[28px] font-400 capitalize;
+  }
+
+  .product-description .title h3 {
+    @apply text-18 leading-26 font-400 transition-all duration-300 delay-150 min-h-[52px];
+  }
+
+  .product-description .title h3:hover {
+    @apply text-gray-300
+  }
+
+  .product-price {
+    @apply text-18 leading-26 font-400;
+  }
+
+  .product-img:hover img {
+    @apply opacity-70
+  }
+
+  .product-wrapper .swiper-pagination-bullet-active {
+    @apply !bg-gray-300
+  }
+
+  .product-wrapper .swiper-pagination-bullet {
+    @apply h-[10px] w-[10px]
   }
 
   /* catagories-start */
   .catagories-wrapper .img {
     @apply pt-[103.65%] h-full w-full relative;
   }
+
   .catagories-wrapper .img img {
     @apply absolute top-0 left-0 object-cover h-full w-full;
   }
+
   /* catagories-end */
+
+  .services-wrapper .services-content span {
+    @apply text-16 leading-[28px] font-400 tracking-[0.8px]
+  }
 
   /* insta-start */
   .insta-wrapper .instafeed-swiper .insta-img {
-    @apply relative w-full overflow-hidden  pt-[100%];
+    @apply relative w-full overflow-hidden pt-[100%];
   }
+
   .insta-wrapper .instafeed-swiper .insta-img img {
     @apply absolute top-0 left-0 h-full w-full object-cover;
   }
@@ -371,17 +458,19 @@
   .instafeed {
     @apply flex overflow-hidden flex-row relative gap-[30px];
   }
-  
+
   @keyframes marquee {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-100%);
     }
   }
+
   .instafeed .insta-coolection {
-    animation: marquee 24s linear infinite;
+    animation: marquee 35s linear infinite;
     gap: 30px;
     flex: none;
     justify-content: flex-start;
@@ -389,33 +478,47 @@
     display: flex;
 
   }
+
   /* insta-start */
 
   /* footer-start */
-  footer .footer-top .contact a {
-    @apply text-Black-200 text-16 leading-26 font-jost;
+  footer .footer-top .contact a,
+  footer .footer-top .contact span {
+    @apply !text-Black-200 text-16 leading-26 font-jost;
   }
+
   footer .footer-top .contact a:hover {
     @apply opacity-50;
   }
+
   .footer-top h4 {
     @apply text-17 leading-22 tracking-[0.85px] mb-20 text-Black-200 uppercase font-400;
   }
+
+  .footer-top .footer-menu ul {
+    @apply flex flex-col gap-[8px]
+  }
+
   .footer-top .footer-menu ul li a {
-    @apply text-16 leading-26 text-Black-200 font-400 mb-10 relative;
+    @apply text-18 leading-24 text-Black-200 font-400 mb-10 relative;
   }
+
   .footer-top .footer-menu ul li a::after {
-    @apply content-[''] absolute  bottom-[0px] bg-Black-100 w-0 h-[1px] ease-linear left-0 transition-all duration-300 delay-75 opacity-100;
+    @apply content-[''] absolute bottom-[0px] bg-Black-100 w-0 h-[1px] ease-linear left-0 transition-all duration-300 delay-75 opacity-100;
   }
+
   .footer-top .footer-menu ul li a::after {
     @apply bg-Black-100;
   }
+
   .footer-top .footer-menu ul li a:hover::after {
     @apply w-full;
   }
+
   .footer-bootom .copyright span {
     @apply text-16 leading-32 text-gray-300;
   }
+
   /* footer-end*/
 }
 

@@ -7,6 +7,23 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!--swiper-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -24,7 +41,7 @@
 
     <!--header-start-->
     <header class="header">
-        <div class="announcement bg-Black-200">
+        <div class="announcement bg-Black-200 py-[6px]">
             <div class="container-fluid">
                 <div class="relative flex items-center justify-center w-full">
                     <div class="announcement-bar swiper ">
@@ -87,7 +104,7 @@
                     </div>
                 </div>
                 <ul
-                    class="m-0 flex flex-wrap justify-center items-center gap-[30px] xsscreen2:gap-[10px] mdscreen:gap-[18px] pr-[70px] lgscreen:pr-0 p-0 relative ">
+                    class="m-0 flex flex-wrap justify-center items-center gap-[30px] xsscreen2:gap-[5px] mdscreen:gap-[18px] pr-[70px] lgscreen:pr-0 p-0 relative ">
                     <li>
                         <a href="javascript:void(0);" class="btn btn-link-ico btn-search">
                             <img src="../assets/images/search.svg" alt="">
@@ -103,10 +120,13 @@
                             <img src="../assets/images/like.svg" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li class="relative">
                         <a href="javascript:void(0);" class="btn btn-link-ico">
                             <img src="../assets/images/cart.svg" alt="">
                         </a>
+                        <div class="absolute top-[-10px] right-[-15px] rounded-100 bg-red-500 h-[23px] w-[23px] lgscreen:h-[15px] lgscreen:w-[15px] lgscreen:top-[-4px] lgscreen:right-[-10px]">
+                            <span class="absolute left-50_per translate-x-minus_50 text-White text-center text-16 font-jost lgscreen:text-[10px]">0</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -114,7 +134,8 @@
         <div class="search-bar hidden py-20 ">
             <div class="container-fluid ">
                 <div class="flex flex-row relative justify-between items-center ">
-                    <input id="inputTxt " type="text " placeholder="Search..." class="text-20 font-jost font-60 bg-transparent text-White h-full w-full border-0 placeholder:text-White">
+                    <input id="inputTxt" type="text " placeholder="Search..."
+                        class="text-20 font-jost font-60 bg-transparent text-White h-full w-full border-0 placeholder:text-White">
                     <a href="javscreipt:void(0); " class="btn-close-search">
                         <img src="../assets/images/close.svg " alt="close-icon">
                     </a>
@@ -135,17 +156,19 @@
                     <div class="flex flex-col relative gap-[30px] pt-[85px] justify-center m-0 p-0 items-start h-full">
                         <div class="container-fluid-big">
                             <div
-                                class="banner-content fadeText flex flex-col  justify-center items-center md:max-w-[480px]  w-full ">
+                                class="banner-content fadeText flex flex-col  justify-center items-center md:max-w-[480px] w-full ">
                                 <div class="title text-center flex flex-col gap-[10px]">
                                     <h1>
                                         DUMMY HEADING
                                     </h1>
-                                    <p class="max-w-[335px] smscreen2:max-w-[296px] mx-auto">
-                                        Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus
-                                    </p>
+                                    <diov class="content">
+                                        <p class="max-w-[335px] smscreen2:max-w-[296px] mx-auto">
+                                            Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus
+                                        </p>
+                                    </diov>
                                 </div>
                                 <div class="btn-custom mt-[25px]">
-                                    <a href="javscript:void(0); " class="btn btn-black">
+                                    <a href="javscript:void(0); " class="btn btn-b-big">
                                         Shop Now
                                     </a>
                                 </div>
@@ -154,45 +177,55 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="banner-img" style="background-image: url(../assets/images/banner.jpg);">
+                    <div class="banner-img">
+                        <img src="../assets/images/banner.jpg" class="h-full w-full object-cover" alt="banner-img">
                     </div>
-                    <div class="container-fluid-big">
-                        <div
-                            class="flex flex-col gap-[30px] translate-y-minus_50 justify-center m-0 p-0 absolute top-[55%] left-[80px] smscreen2:left-[8px] items-center">
-                            <div class="title  items-center text-center w-full flex flex-col gap-[10px]">
-                                <h1>
-                                    DUMMY HEADING
-                                </h1>
-                                <p class="max-w-[335px] smscreen2:max-w-[296px] mx-auto">
-                                    Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus
-                                </p>
-                            </div>
-                            <div class="btn-custom ">
-                                <a href="javscript:void(0); " class="btn btn-black">
-                                    Shop Now
-                                </a>
+                    <div class="flex flex-col relative gap-[30px] pt-[85px] justify-center m-0 p-0 items-start h-full">
+                        <div class="container-fluid-big">
+                            <div
+                                class="banner-content fadeText flex flex-col  justify-center items-center md:max-w-[480px] w-full ">
+                                <div class="title text-center flex flex-col gap-[10px]">
+                                    <h1>
+                                        DUMMY HEADING
+                                    </h1>
+                                    <diov class="content">
+                                        <p class="max-w-[335px] smscreen2:max-w-[296px] mx-auto">
+                                            Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus
+                                        </p>
+                                    </diov>
+                                </div>
+                                <div class="btn-custom mt-[25px]">
+                                    <a href="javscript:void(0); " class="btn btn-b-big">
+                                        Shop Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="banner-img" style="background-image: url(../assets/images/banner.jpg);">
+                    <div class="banner-img">
+                        <img src="../assets/images/banner.jpg" class="h-full w-full object-cover" alt="banner-img">
                     </div>
-                    <div class="container-fluid-big">
-                        <div
-                            class="flex flex-col gap-[30px] translate-y-minus_50 justify-center m-0 p-0 absolute top-[55%] left-[80px] smscreen2:left-[8px] items-center">
-                            <div class="title  items-center text-center w-full flex flex-col gap-[10px]">
-                                <h1>
-                                    DUMMY HEADING
-                                </h1>
-                                <p class="max-w-[335px] smscreen2:max-w-[296px] mx-auto">
-                                    Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus
-                                </p>
-                            </div>
-                            <div class="btn-custom ">
-                                <a href="javscript:void(0); " class="btn btn-black">
-                                    Shop Now
-                                </a>
+                    <div class="flex flex-col relative gap-[30px] pt-[85px] justify-center m-0 p-0 items-start h-full">
+                        <div class="container-fluid-big">
+                            <div
+                                class="banner-content fadeText flex flex-col  justify-center items-center md:max-w-[480px] w-full ">
+                                <div class="title text-center flex flex-col gap-[10px]">
+                                    <h1>
+                                        DUMMY HEADING
+                                    </h1>
+                                    <diov class="content">
+                                        <p class="max-w-[335px] smscreen2:max-w-[296px] mx-auto">
+                                            Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus
+                                        </p>
+                                    </diov>
+                                </div>
+                                <div class="btn-custom mt-[25px]">
+                                    <a href="javscript:void(0); " class="btn btn-b-big">
+                                        Shop Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -203,7 +236,7 @@
     <!--banner-end-->
 
     <!--filters-start-->
-    <section class="filter-wrapper  pt-80 pb-60 mdscreen:py-30">
+    <section class="filter-wrapper pt-80 pb-60 mdscreen:py-30">
         <div class="container-fluid-big">
             <div class="flex flex-wrap justify-center items-center m-0 p-0">
                 <div class="xl:w-8/12 w-10/12 smscreen:w-full">
@@ -269,8 +302,8 @@
     <!--img-grid-start-->
     <section class="img-grid-wrapper py-[60px] mdscreen:py-30">
         <div class="container-fluid-big">
-            <div class="flex flex-col items-stretch w-full h-full m-0 p-0 gap-[30px]">
-                <div class="flex lg:flex-row flex-col gap-[30px] h-full w-full items-center justify-center fadeText">
+            <div class="flex flex-col items-stretch w-full h-full m-0 p-0 gap-[25px]">
+                <div class="flex lg:flex-row flex-col gap-[25px] h-full w-full items-center justify-center fadeText">
                     <div class="w-full lg:w-6/12 ">
                         <a href="javascript:void(0);" class="img-container card">
                             <div class="img landscape">
@@ -279,7 +312,7 @@
                                     <div class="content">
                                         <div class="title">
                                             <h3>
-                                                fitness wear
+                                                smart watch
                                             </h3>
                                         </div>
                                     </div>
@@ -304,7 +337,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex lg:flex-row flex-col gap-[30px] w-full h-full justify-start items-start fadeText ">
+                <div class="flex lg:flex-row flex-col gap-[25px] w-full h-full justify-start items-start fadeText ">
                     <div class="w-full lg:w-4/12 h-full">
                         <a href="javascript:void(0);" class="block h-full card">
                             <div class="img portrait ">
@@ -313,7 +346,7 @@
                                     <div class="content">
                                         <div class="title">
                                             <h3>
-                                                fitness wear
+                                                smart watch
                                             </h3>
                                         </div>
                                     </div>
@@ -329,7 +362,7 @@
                                     <div class="content">
                                         <div class="title">
                                             <h3>
-                                                shorts
+                                                smart watch
                                             </h3>
                                         </div>
                                     </div>
@@ -344,8 +377,8 @@
                                 <div class="overlay">
                                     <div class="content">
                                         <div class="title">
-                                            <h3>
-                                                fitness wear
+                                            <h3> 
+                                                smart watch
                                             </h3>
                                         </div>
                                     </div>
@@ -368,109 +401,118 @@
                 </h4>
             </div>
             <div
-                class="flex flex-wrap justify-center items-center gap-[50px] mdscreen:gap-[30px] product-category mb-[45px] fadeText">
-                <span>
+                class="flex flex-wrap justify-center items-center gap-[50px] mdscreen:gap-[30px] product-category mb-[45px] mdscreen:mb-30 fadeText">
+                <a href="javascript:void(0);">
                     Shorts
-                </span>
-                <span>
+                </a>
+                <a href="javascript:void(0);">
                     Smart watch
-                </span>
-                <span>
+                </a>
+                <a href="javascript:void(0);">
                     Fitness Band
-                </span>
+                </a>
             </div>
             <div class="product-slider swiper">
                 <div class="swiper-wrapper  fadeText">
                     <div class="swiper-slide">
-                        <div class="flex flex-col">
-                            <div class="product-img">
-                                <img src="../assets/images/product-1.png" height="278" width="278" alt="">
+                        <a href="javascript:void(0);" class="product-card text-Black-100">
+                            <div class="flex flex-col">
+                                <div class="product-img">
+                                    <img src="../assets/images/product-1.png" height="278" width="278" alt="">
+                                </div>
+                                <div class="product-description">
+                                    <div class="title mb-[12px]">
+                                        <h3>
+                                            New Men's Gym Jogging Exercise Fitness Sports Suit Male
+                                        </h3>
+                                    </div>
+                                    <div class="product-price mb-30 cursor-text">
+                                        $60.00
+                                    </div>
+                                    <div class="cart-btn">
+                                        <a href="javascript:void(0);" class="btn btn-transperent">
+                                            add to cart
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="product-description">
-                                <div class="title mb-[12px]">
-                                    <h3>
-                                        New Men's Gym Jogging Exercise Fitness Sports Suit Male
-                                    </h3>
-                                </div>
-                                <div class="product-price mb-30">
-                                    $60.00
-                                </div>
-                                <div class="cart-btn">
-                                    <a href="javascript:void(0);" class="btn btn-transperent">
-                                        add cart
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="flex flex-col">
-                            <div class="product-img">
-                                <img src="../assets/images/product-2.png" height="278" width="278" alt="">
+                        <a href="javascript:void(0);" class="product-card text-Black-100">
+                            <div class="flex flex-col">
+                                <div class="product-img">
+                                    <img src="../assets/images/product-2.png" height="278" width="278" alt="">
+                                </div>
+                                <div class="product-description">
+                                    <div class="title mb-[12px]">
+                                        <h3>
+                                            Factory Sale Gym Fitness Clothing Custom Shorts Fitness
+                                        </h3>
+                                    </div>
+                                    <div class="product-price mb-30 cursor-text">
+                                        $16.50
+                                    </div>
+                                    <div class="cart-btn">
+                                        <a href="javascript:void(0);" class="btn btn-transperent">
+                                            add to cart
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="product-description">
-                                <div class="title mb-[12px]">
-                                    <h3>
-                                        Factory Sale Gym Fitness Clothing Custom Shorts Fitness
-                                    </h3>
-                                </div>
-                                <div class="product-price mb-30">
-                                    $16.50
-                                </div>
-                                <div class="cart-btn">
-                                    <a href="javascript:void(0);" class="btn btn-transperent">
-                                        add cart
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="flex flex-col">
-                            <div class="product-img">
-                                <img src="../assets/images/product-3.png" height="278" width="278" alt="">
+                        <a href="javascript:void(0);" class="product-card text-Black-100">
+                            <div class="flex flex-col">
+                                <div class="product-img">
+                                    <img src="../assets/images/product-3.png" height="278" width="278" alt="">
+                                </div>
+                                <div class="product-description">
+                                    <div class="title mb-[12px]">
+                                        <h3>
+                                            Fitness Equipment Booty Belt Exercise Resistance Band Set
+                                        </h3>
+                                    </div>
+                                    <div class="product-price mb-30 cursor-text">
+                                        $4.00
+                                    </div>
+                                    <div class="cart-btn">
+                                        <a href="javascript:void(0);" class="btn btn-transperent">
+                                            add to cart
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="product-description">
-                                <div class="title mb-[12px]">
-                                    <h3>
-                                        Fitness Equipment Booty Belt Exercise Resistance Band Set
-                                    </h3>
-                                </div>
-                                <div class="product-price mb-30">
-                                    $4.00
-                                </div>
-                                <div class="cart-btn">
-                                    <a href="javascript:void(0);" class="btn btn-transperent">
-                                        add cart
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="flex flex-col">
-                            <div class="product-img">
-                                <img src="../assets/images/product-4.png" height="278" width="278" alt="">
+                        <a href="javascript:void(0);" class="product-card text-Black-100">
+                            <div class="flex flex-col">
+                                <div class="product-img">
+                                    <img src="../assets/images/product-4.png" height="278" width="278" alt="">
+                                </div>
+                                <div class="product-description">
+                                    <div class="title mb-[12px]">
+                                        <h3>
+                                            Smart Watch With Bracelet - Black
+                                        </h3>
+                                    </div>
+                                    <div class="product-price mb-30 cursor-text">
+                                        $29.25
+                                    </div>
+                                    <div class="cart-btn">
+                                        <a href="javascript:void(0);" class="btn btn-transperent">
+                                            add to cart
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="product-description">
-                                <div class="title mb-[12px]">
-                                    <h3>
-                                        Smart Watch With Bracelet - Black
-                                    </h3>
-                                </div>
-                                <div class="product-price mb-30">
-                                    $29.25
-                                </div>
-                                <div class="cart-btn">
-                                    <a href="javascript:void(0);" class="btn btn-transperent">
-                                        add cart
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="swiper-pagination !relative !bottom-[-25px]"></div>
         </div>
     </section>
     <!--produt-slider-end-->
@@ -539,10 +581,10 @@
     <section class="services-wrapper relative py-[60px] mdscreen:py-30 ">
         <div class="container-fluid-big">
             <div
-                class="flex flex-wrap lg:justify-between w-full gap-[20px] px-80 mdscreen:px-40 items-center bg-brown-100 py-14 fadeText">
+                class="flex flex-wrap lg:justify-between justify-center w-full gap-[20px] px-80 mdscreen:px-40 items-center bg-brown-100 py-14 fadeText">
                 <div class="services-content flex justify-center items-center gap-[7px]">
                     <div class="services-icon">
-                        <img src="../assets/images/shiping.svg" alt=" Free Shipping on all">
+                        <img src="../assets/images/shiping.svg" alt=" Free Shipping on all" class="inline-block">
                     </div>
                     <div class="content">
                         <span>
@@ -552,7 +594,7 @@
                 </div>
                 <div class="services-content flex  justify-center items-center gap-[7px]">
                     <div class="services-icon">
-                        <img src="../assets/images/gift.svg" alt="Student Discount 40% OFF">
+                        <img src="../assets/images/gift.svg" alt="Student Discount 40% OFF" class="inline-block">
                     </div>
                     <div class="content">
                         <span>
@@ -562,7 +604,7 @@
                 </div>
                 <div class="services-content flex justify-center items-center gap-[7px]">
                     <div class="services-icon">
-                        <img src="../assets/images/rotate.svg" alt="Free Returns In-Store">
+                        <img src="../assets/images/rotate.svg" alt="Free Returns In-Store" class="inline-block">
                     </div>
                     <div class="content">
                         <span>
@@ -641,24 +683,34 @@
             <div class="container-fluid">
                 <div class="flex w-full flex-wrap xl:justify-between mdscreen:flex-col gap-[30px] fadeText">
                     <div class="flex flex-col justify-start lg:flex-1">
-                        <div class="footer-logo mb-20">
+                        <a href="#"  class="footer-logo mb-20">
                             <img src="../assets/images/logo.svg" alt="footer-logo">
-                        </div>
+                        </a>
                         <div class="adress mb-15">
                             685 Market Street <br>
                             United States
                         </div>
                         <div class="contact flex flex-col justify-start items-start">
-                            <a href="tell: 1.800.000.6690">
-                                Call us: 1.800.000.6690
-                            </a>
-                            <a href="mailTo:email@domain.com">
-                                Email: email@domain.com
-                            </a>
+                            <div class="contact-info flex flex-wrap justify-center items-center gap-[5px]">
+                                <span>
+                                    Call us: 
+                                </span>
+                                <a href="tell: 1.800.000.6690">
+                                   1.800.000.6690
+                                </a>
+                            </div>
+                            <div class="contact-info flex flex-wrap justify-center items- gap-[5px]">
+                                <span>
+                                    Email:
+                                </span>
+                                <a href="mailTo:email@domain.com">
+                                    email@domain.com
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
-                        class="flex flex-row items-start justify-center lg:gap-10 xxl:gap-[100px] mdscreen:flex-col mdscreen:gap-[30px] lg:flex-auto">
+                        class="flex flex-row items-start justify-center lg:gap-10 xxl:gap-[100px] mdscreen:flex-col lgscreen:gap-[30px] lg:flex-auto">
                         <div class="footer-menu ">
                             <div class="title title-white">
                                 <h4>
@@ -754,13 +806,13 @@
                         </div>
                     </div>
                     <div class="subscribe-form lg:flex-1">
-                        <div class="flex flex-col justify-start gap-[12px]">
+                        <div class="flex flex-col justify-start">
                             <div class="title">
                                 <h4>
                                     Newsletter Sign Up
                                 </h4>
                             </div>
-                            <div class="content max-w-[315px]">
+                            <div class="content max-w-[315px] mb-[12px]">
                                 <p>
                                     Receive our latest updates about our products and promotions.
                                 </p>
@@ -769,7 +821,7 @@
                                 <input type="text"
                                     class="bg-White border-gray-100 border-solid border-1 p-10 rounded-30">
                             </form>
-                            <div class="btn-custom">
+                            <div class="btn-custom mt-[12px]">
                                 <a href="javscript:void(0);" class="btn btn-b-sm">
                                     Subscribe now
                                 </a>
@@ -784,7 +836,7 @@
                 <div class="flex md:flex-row flex-col items-center justify-between gap-[40px] ">
                     <div class="copyright ">
                         <span>
-                            © 2022 FALAFEL VERIFIES. Developed by Agency Name
+                            © 2022 <a href="index.html" class="text-gray-300"> FALAFEL VERIFIES.</a> Developed by Agency Name
                         </span>
                     </div>
                     <div class="footer-brands flex flex-wrap justify-center items-center gap-[18px]">
@@ -809,7 +861,6 @@
         </div>
     </footer>
     <!--footer end-->
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
